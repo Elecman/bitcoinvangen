@@ -1,14 +1,14 @@
 # bitcoinvangen
 Keepler's bitcoin vanity address generator
 
-##How to run
+## How to run
 
-####Install the necessary Python modules
+#### Install the necessary Python modules
 
 `pip install bitcoin`
 `pip install numpy`
 
-####Run!
+#### Run!
 
 `python bitcoinvangen.py`
 
