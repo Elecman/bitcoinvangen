@@ -35,7 +35,7 @@ def generate(thread):
             sys.exit()
 
         if caseSens and address[1:len(name) + 1] == name:
-            walletData = f'''Address: {address}\nPrivate key: {privkey}'''
+            walletData = f'Address: {address}\nPrivate key: {privkey}'
 
             with open('wallet.txt', 'w+') as file:
                 file.write(walletData)
