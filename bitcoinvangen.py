@@ -37,10 +37,10 @@ def startGenerating(name, caseSens, thread, running):
             print("Store the private key in a safe place IMMEDIATELY.\n\nThanks for using keepler's VanGen.\nYou can contribute to this project at github.com/Keepler/bitcoinvangen")
             
 if __name__ == '__main__':
-    print("\nWelcome to keepler's Bitcoin VanGen\n\nThe name can't contain maiuscle O, minuscle L, maiuscle i or zero, symbols or more than 32 characters.")
+    print("\nWelcome to keepler's Bitcoin VanGen\n\nThe name can't contain upper case O, lower case L, upper case i, digit zero, symbols or more than 32 characters.")
 
     while True:
-        name = str(input('Input a name (the longer the name be, more time it will take): '))
+        name = str(input('Input a name (the longer the name, the longer it takes): '))
         valid = True
 
         for x in name:
