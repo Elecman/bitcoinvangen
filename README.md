@@ -12,4 +12,4 @@ Keepler's bitcoin vanity address generator for Python 3.X
 
 `python bitcoinvangen.py`
 
-#####A better performance can be get on Linux
+####A better performance can be get on Linux
