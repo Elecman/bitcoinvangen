@@ -1,5 +1,5 @@
 # bitcoinvangen
-Keepler's bitcoin vanity address generator
+Keepler's bitcoin vanity address generator for Python 3.X
 
 ## How to run
 
@@ -12,4 +12,4 @@ Keepler's bitcoin vanity address generator
 
 `python bitcoinvangen.py`
 
-Use Python 3.X
+#####A better performance can be get on Linux
