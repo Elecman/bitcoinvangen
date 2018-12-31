@@ -5,8 +5,7 @@ Keepler's bitcoin vanity address generator for Python 3.X
 
 #### Install the necessary Python modules
 
-`pip install bitcoin`
-`pip install numpy`
+`pip install bit`
 
 #### Run!
 
