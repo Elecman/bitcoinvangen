@@ -5,6 +5,7 @@ from multiprocessing import Process, Value
 from ctypes import c_bool
 from time import time, sleep
 import sys
+from bit import Key, PrivateKey, PrivateKeyTestnet
 
 def startGenerating(name, caseSens, thread, running):
     timestamp = int(time())
@@ -23,12 +24,15 @@ def startGenerating(name, caseSens, thread, running):
 
         rate += 1
 
-        random_bytes = bytes(32)
-        privkey = sha256(random_bytes)
-        pubkey = privtopub(privkey)
-        address = pubtoaddr(pubkey)
+        #random_bytes = bytes(32)
+        #privkey = sha256(random_bytes)
+        #pubkey = privtopub(privkey)
+        #address = pubtoaddr(pubkey)
+        key = Key()
+        address = key.address
 
         if (not caseSens and address[1:len(name) + 1].lower() == name.lower()) or (caseSens and address[1:len(name) + 1] == name):
+            privkey = key.to_wif()
             running.value = False
             print('-'*100)
             print(f'''\nWallet successfully generated!\n\nAddress: {address}\nPrivate key: {privkey}\n''')
