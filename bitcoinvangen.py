@@ -1,6 +1,4 @@
 from hashlib import sha256
-from numpy.random import bytes, seed
-from bitcoin import *
 from multiprocessing import Process, Value
 from ctypes import c_bool
 from time import time, sleep
@@ -18,16 +16,12 @@ def startGenerating(name, caseSens, thread, running):
         if int(time()) == timestamp + 1:
             timestamp += 1
             if times < 10: times += 0 
-            if times == 10: print(f'Thread {thread} is generating ~{rate} wallets per second.')
+            if times == 10: print(f'Thread {thread} is generating ~{rate} addresses per second.')
             times += 1
             rate = 0
 
         rate += 1
-
-        #random_bytes = bytes(32)
-        #privkey = sha256(random_bytes)
-        #pubkey = privtopub(privkey)
-        #address = pubtoaddr(pubkey)
+        
         key = Key()
         address = key.address
 
@@ -35,7 +29,7 @@ def startGenerating(name, caseSens, thread, running):
             privkey = key.to_wif()
             running.value = False
             print('-'*100)
-            print(f'''\nWallet successfully generated!\n\nAddress: {address}\nPrivate key: {privkey}\n''')
+            print(f'''\nAdress successfully generated!\n\nAddress: {address}\nPrivate key: {privkey}\n''')
             print('-'*100)
             print('\nThe private key gives total access to your coins, so NEVER share it with anyone.')
             print("Store the private key in a safe place IMMEDIATELY.\n\nThanks for using keepler's VanGen.\nYou can contribute to this project at github.com/Keepler/bitcoinvangen")
