@@ -1,4 +1,3 @@
-from hashlib import sha256
 from multiprocessing import Process, Value
 from ctypes import c_bool
 from time import time, sleep
