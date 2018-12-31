@@ -5,7 +5,7 @@ from multiprocessing import Process, Value
 from ctypes import c_bool
 from time import time, sleep
 import sys
-from bit import Key, PrivateKey, PrivateKeyTestnet
+from bit import Key
 
 def startGenerating(name, caseSens, thread, running):
     timestamp = int(time())
